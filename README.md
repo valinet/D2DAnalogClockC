@@ -1,2 +1,6 @@
 # D2DAnalogClockC
 Example of an analog clock drawn using Direct2D based on the sample code but drawn using ID2D1DeviceContext and written in pure C.
+
+Based on example from [Get Started with Win32 and C++](https://docs.microsoft.com/en-us/windows/win32/learnwin32/your-first-direct2d-program), and enhanced for [Direct2D 1.1](https://docs.microsoft.com/en-us/archive/msdn-magazine/2013/may/windows-with-c-introducing-direct2d-1-1). You need to place the files "d2d1.h" and "d2d1_1.h" from [Windows 10 SDK 10586](https://developer.microsoft.com/en-us/windows/downloads/sdk-archive/) or earlier to the project folder, as Microsoft removed the C-style definitions for Direct2D from the latest SDK. Also, note that even some of the definitions in those headers are bugged, as explained [here](https://github.com/fanc999/d2d-sample-mostly-c), namely some functions have their prototypes changed, one such example being `ID2D1DeviceContext_GetSize`.
+
+I structured the code so that it is hopefully easy to read, understand and extend, implemented in a COM/OOP-like pattern in order better understand how things work in the backend of C++, for example.
